@@ -38,5 +38,6 @@ public class RegisterStepDefinition {
         Thread.sleep(3000);
         loginSectionStep.signinMercuryTours(dataList.get(0));
         loginSectionStep.sendCredentials();
+        loginSectionStep.compareSuccessMessage();
     }
 }

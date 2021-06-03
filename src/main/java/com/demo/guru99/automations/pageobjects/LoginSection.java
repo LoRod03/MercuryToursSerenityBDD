@@ -2,6 +2,9 @@ package com.demo.guru99.automations.pageobjects;
 
 import net.serenitybdd.core.pages.PageObject;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+
+import java.util.List;
 
 public class LoginSection extends PageObject {
     By signinLinkLocator = By.xpath("//a[@href='login.php']");
@@ -24,6 +27,11 @@ public class LoginSection extends PageObject {
 
     public void submitClick(){
         getDriver().findElement(submitButton).click();
+    }
+
+    public String loginSuccessfullyMessage(){
+        List<WebElement> fonts = getDriver().findElements(By.tagName("font"));
+        return fonts.get(3).getText();
     }
 
 }

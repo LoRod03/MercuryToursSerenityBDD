@@ -3,6 +3,7 @@ package com.demo.guru99.automations.steps;
 import com.demo.guru99.automations.models.Data;
 import com.demo.guru99.automations.pageobjects.LoginSection;
 import net.thucydides.core.annotations.Step;
+import org.junit.Assert;
 
 public class LoginSectionStep {
     LoginSection loginSection = new LoginSection();
@@ -21,5 +22,10 @@ public class LoginSectionStep {
     @Step
     public void sendCredentials(){
         loginSection.submitClick();
+    }
+
+    @Step
+    public void compareSuccessMessage(){
+        Assert.assertEquals("Thank you for Loggin.", loginSection.loginSuccessfullyMessage());
     }
 }
