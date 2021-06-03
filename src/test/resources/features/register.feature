@@ -7,6 +7,8 @@ Feature: register
       | firstName   | lastName   | phoneNumber   | emailAddress   | username   | password   |
       | <firstName> | <lastName> | <phoneNumber> | <emailAddress> | <username> | <password> |
     Then could see the welcome text
+      | username   | password   |
+      | <username> | <password> |
     Examples:
       | firstName | lastName | phoneNumber | emailAddress    | username | password |
       | Maria     | Florez   | 3143234     | maria@gmail.com | maflo    | 123*     |

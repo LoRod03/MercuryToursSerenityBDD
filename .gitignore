@@ -1,0 +1,25 @@
+# Intellij
+/.idea/
+/out/
+/.metadata/
+*/.idea/
+*/out/
+*/.metadata/
+
+# Gradle
+/.gradle/
+/build/
+*/.gradle/
+*/build/
+target
+
+# Ignore Gradle GUI config
+gradle-app.setting
+
+# Not ignoring Gradle wrapper jar file (.jar files are usually ignored)
+!gradle\wrapper\gradle-wrapper.jar
+
+# Cache of project
+.gradletasknamecache
+
+
